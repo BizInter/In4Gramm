@@ -15,7 +15,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            overflow: hidden; /* Скрываем полосы прокрутки */
+            overflow-y: auto; /*  OR: overflow: hidden; /* Скрываем полосы прокрутки */
         }
 
         .container {
@@ -73,7 +73,21 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+          }
+
+        /* Responsive adjustments for mobile */
+    @media (max-width: 600px) {
+        .container {
+            padding: 20px 10px;
         }
+        h1 {
+            font-size: 2em;
+        }
+        .cta-button {
+            font-size: 1em;
+            padding: 12px 20px;
+        }
+      }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
 </head>
